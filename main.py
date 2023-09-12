@@ -1,12 +1,15 @@
 #Made by Alexandre Wilbur in 2023
-chaineacompter = str(input("Quel est votre chaine de mots?"))
-word_count = 0
-nmb1 = 0
-nmb2 = 1
-aaa = chaineacompter
-limit = len(chaineacompter)
-trieswithletter = 0
+
 def wordcounter():
+    chaineacompter = str(input("Quel est votre chaine de mots?"))
+    if chaineacompter == "a" or "I" or "A" or "i":
+        print("La chaine contien 1 mots!")
+    word_count = 0
+    nmb1 = 0
+    nmb2 = 1
+    aaa = chaineacompter
+    limit = len(chaineacompter)
+    trieswithletter = 0
     while nmb2 < limit:
         aaa = str(chaineacompter[nmb1:nmb2])
         nmb1 = nmb1 + 1
