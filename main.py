@@ -6,19 +6,21 @@ nmb2 = 1
 aaa = chaineacompter
 limit = len(chaineacompter)
 trieswithletter = 0
-while nmb2 < limit:
-    aaa = str(chaineacompter[nmb1:nmb2])
-    nmb1 = nmb1 + 1
-    nmb2 = nmb2 + 1
-    if aaa == " " and trieswithletter >= 1:
-        word_count = word_count + 1
-        trieswithletter = 0
-    elif aaa != " ":
-        trieswithletter = trieswithletter + 1
-    if nmb2 == limit:
-        if trieswithletter > 0:
-            print("La chaine contien", word_count + 1, "mots!")
-            exit()
-        elif trieswithletter == 0:
-            print("La chaine contien", word_count, "mots!")
-            exit()
+def wordcounter():
+    while nmb2 < limit:
+        aaa = str(chaineacompter[nmb1:nmb2])
+        nmb1 = nmb1 + 1
+        nmb2 = nmb2 + 1
+        if aaa == " " and trieswithletter >= 1:
+            word_count = word_count + 1
+            trieswithletter = 0
+        elif aaa != " ":
+            trieswithletter = trieswithletter + 1
+        if nmb2 == limit:
+            if trieswithletter > 0:
+                print("La chaine contien", word_count + 1, "mots!")
+                exit()
+            elif trieswithletter == 0:
+                print("La chaine contien", word_count, "mots!")
+                exit()
+wordcounter()
